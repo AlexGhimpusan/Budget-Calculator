@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6 text-center">
-            <h2>Income</h2>
+            <h2 class="text-success">Income</h2>
             <ul *ngFor="let value of values" class="list-group">
                 <li *ngIf="value.positive()" class="list-group-item list-group-item-success">
                     +{{ value.amount }}: {{ value.description }}
@@ -11,7 +11,7 @@
         </div>
         
         <div class="col-md-6 text-center">
-            <h2>Expenses</h2>
+            <h2 class="text-danger">Expenses</h2>
             <ul *ngFor="let value of values" class="list-group">
                 <li #currentValue *ngIf="!value.positive()" class="list-group-item list-group-item-danger">
                     {{ value.amount }}: {{ value.description }}
