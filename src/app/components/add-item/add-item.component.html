@@ -1,10 +1,10 @@
 <div class="container alert alert-warning">
-    <h1 class="text-center">{{ totalBudget }}</h1>
     <div class="d-flex justify-content-center">
         <input #amount type="text" placeholder="Amount">
         <input #description type="text" placeholder="Description">
-        <button (click)="updateBudget(amount.value)" class="btn btn-warning">
+        <button (click)="update(amount, description)" class="btn btn-warning">
             Add</button>
-        <button (click)="resetBudget()" class="btn btn-danger">Reset</button>
+        <button (click)="reset()" class="btn btn-danger">
+            Reset</button>
     </div>
 </div>

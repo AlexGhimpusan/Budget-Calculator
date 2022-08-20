@@ -1,0 +1,16 @@
+<div class="container alert alert-primary">
+    <table class="table">
+        <thead class="table-light">
+            <tr>
+                <th>Value</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let value of values">
+                <th> {{ value.amount }} </th>
+                <td> {{ value.description }} </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
