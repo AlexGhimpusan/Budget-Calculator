@@ -16,6 +16,14 @@ export class ValuesComponent implements OnInit {
   ngOnInit(): void {
     this.dataService.currentValues.subscribe(values => this.values = values);
   }
+
+  deleteValue(value: Value) {
+    this.values.forEach((element, index)=>{
+      if(element == value) this.values.splice(index, 1);
+   });
+
+   this.dataService.updateBudget(-value.amount);
+  }
   
 
 

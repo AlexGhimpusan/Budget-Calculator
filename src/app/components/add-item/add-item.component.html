@@ -1,10 +1,15 @@
 <div class="container alert alert-warning">
-    <div class="d-flex justify-content-center">
-        <input #amount type="text" placeholder="Amount">
-        <input #description type="text" placeholder="Description">
-        <button (click)="update(amount, description)" class="btn btn-warning">
-            Add</button>
-        <button (click)="reset()" class="btn btn-danger">
-            Reset</button>
+    <div class="row">
+        <div class="d-flex justify-content-center">
+            <input #amount type="text" placeholder="Amount">
+            <input #description type="text" placeholder="Description">
+            <button (click)="update(amount, description)" class="btn btn-success">
+                <i class="fa-solid fa-circle-plus"></i>
+                Add</button>
+            <button (click)="reset()" class="btn btn-danger">
+                <i class="fa-solid fa-power-off"></i>
+                Reset</button>
+        </div>
     </div>
+
 </div>

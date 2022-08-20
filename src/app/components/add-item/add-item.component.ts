@@ -15,11 +15,13 @@ export class AddItemComponent implements OnInit {
 
   update(inputAmount: HTMLInputElement, inputDescription: HTMLInputElement) {
     this.dataService.updateBudget(+inputAmount.value);
-    this.dataService.addNewValue(+inputAmount.value, inputDescription.value);
+
+    if (+inputAmount.value != 0) {
+      this.dataService.addNewValue(+inputAmount.value, inputDescription.value);
+    }
 
     inputAmount.value = '';
     inputDescription.value = '';
-
   }
 
   reset() {
